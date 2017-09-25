@@ -1,7 +1,8 @@
 -- 3rd Party libraries
-class = require "assets.lib.clasp" -- Object orientated programming
-anim8 = require "assets.lib.anim8" -- Simple frame based animation
-bump = require "assets.lib.bump.bump" -- Collisions (This has a dedicated directory)
+class = require "assets.lib.clasp.clasp" -- Object orientated programming
+anim8 = require "assets.lib.anim8.anim8" -- Simple frame based animation
+bump = require "assets.lib.bump.bump" -- Collisions
+hump = require "assets.lib.hump.hump"
 
 player = require "assets.script.player"
 physics = require "assets.script.physics"
