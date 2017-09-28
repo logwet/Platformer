@@ -1,12 +1,12 @@
-[submodule "assets/lib/bump"]
-	path = assets/lib/bump
-	url = https://github.com/kikito/bump.lua.git
-[submodule "assets/lib/hump"]
-	path = assets/lib/hump
-	url = https://github.com/vrld/hump.git
-[submodule "assets/lib/anim8"]
-	path = assets/lib/anim8
+[submodule "libs/anim8"]
+	path = libs/anim8
 	url = https://github.com/kikito/anim8.git
-[submodule "assets/lib/clasp"]
-	path = assets/lib/clasp
+[submodule "libs/clasp"]
+	path = libs/clasp
 	url = https://github.com/evolbug/lua-clasp.git
+[submodule "libs/hump"]
+	path = libs/hump
+	url = https://github.com/vrld/hump.git
+[submodule "libraries/bump"]
+	path = libraries/bump
+	url = https://github.com/kikito/bump.lua.git

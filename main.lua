@@ -1,27 +1,17 @@
--- 3rd Party libraries
---class = require "assets.lib.clasp.clasp" -- Object orientated programming
-anim8 = require "assets.lib.anim8.anim8" -- Simple frame based animation
-bump = require "assets.lib.bump.bump" -- Collisions
-Class = require "assets.lib.hump.class"
+--[[
+A simple platformer designed and programmed by Sachila Herath
+]]
 
-entity = require "assets.entities.entity"
-player = require "assets.script.player"
-physics = require "assets.script.physics"
+Gamestate = require "libs.hump.gamestate"
+
+-- Pull in each of the gamestates
+local mainMenu = require 'gamestates.mainmenu'
+local gameLevel1 = require 'gamestates.gameLevel1'
+local pause = require 'gamestates.pause'
 
 function love.load()
-  player.init(player)
-  physics.init(physics)
-
-end
-
-function love.update(dt)
-  player.anim.idle:update(dt)
-  player.update(player, dt)
-end
-
-function love.draw(dt)
-  player.anim.idle:draw(player.img, player.x, player.y)
-  physics.draw(physics)
+  Gamestate.registerEvents()
+  Gamestate.switch(gameLevel1)
 end
 
 function love.keypressed(key)
