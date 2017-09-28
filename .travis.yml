@@ -2,7 +2,7 @@ language: node_js
 
 before_script:
   - git config --global user.email "sachila.herath@outlook.com"
-  - git config -- global user.name "Sachila Herath"
+  - git config --global user.name "Sachila Herath"
 
 script:
   - zip -9 -r Platformer.love .
