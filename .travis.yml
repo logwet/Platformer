@@ -1,0 +1,21 @@
+language: node_js
+
+before_script:
+  - git config --global user.email "sachila.herath@outlook.com"
+  - git config -- global user.name "Sachila Herath"
+
+script:
+  - zip -9 -r Platformer.love .
+  - mv Platformer.love bin/release/universal/
+  - cat bin/love-0.10.2-win32/love.exe bin/release/universal/Platformer.love > bin/release/win32/Platformer.exe
+  - cp bin/love-0.10.2-win32/*.dll bin/release/win32/
+  - cp bin/love-0.10.2-win32/*.txt bin/release/win32/
+  - cp bin/love-0.10.2-win32/*.ico bin/release/win64/
+  - cat bin/love-0.10.2-win64/love.exe bin/release/universal/Platformer.love > bin/release/win64/Platformer.exe
+  - cp bin/love-0.10.2-win64/*.dll bin/release/win64/
+  - cp bin/love-0.10.2-win64/*.txt bin/release/win64/
+  - cp bin/love-0.10.2-win64/*.ico bin/release/win64/
+  - git remote add deploy $DEPLOY_REPO
+  - git add --all
+  - git commit -m "Built binaries"
+  - git push --force --quiet deploy master
