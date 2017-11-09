@@ -11,7 +11,7 @@ function player:init(world, x, y)
   --Attributes:
   self.xVel = 0
   self.yVel = 0
-  self.acc = 100 -- Acceleration
+  self.acc = 200 -- Acceleration
   self.maxSpeed = 600
   self.friction = 20
   self.gravity = 100

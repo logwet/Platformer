@@ -7,6 +7,9 @@
 [submodule "libs/hump"]
 	path = libs/hump
 	url = https://github.com/vrld/hump.git
-[submodule "libraries/bump"]
+[submodule "libs/bump"]
 	path = libraries/bump
 	url = https://github.com/kikito/bump.lua.git
+[submodule "libs/sti"]
+	path = libs/sti
+	url = https://github.com/karai17/Simple-Tiled-Implementation.git
